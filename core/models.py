@@ -10,4 +10,6 @@ class StartUpInternships(models.Model):
     description_file = models.FileField(upload_to ='media/attachments/%Y/%m/')
     startup_website = models.URLField()
     last_date_to_apply = models.DateField()
-    
+
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)

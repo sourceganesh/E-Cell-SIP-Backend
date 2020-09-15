@@ -11,7 +11,7 @@
         <input class="form-control" id="apply-by" name="last-date" placeholder="DD/MM/YYY" type="date"/>
     </div>
     <div class="form-group">
-      <button class="btn btn-primary " name="submit" type="submit">Submit</button>
+      <button class="btn btn-primary " type="submit">Submit</button>
     </div>
 </form>
 
@@ -25,6 +25,7 @@
         <th scope="col">Point of Contact Incentive</th>
         <th scope="col">Point of Contact Attached Document</th>
         <th scope="col">Website</th>
+        <th scope="col">Last Date</th>
       </tr>
     </thead>
     <tbody>
@@ -37,6 +38,7 @@
                 <td>{{internship.incentive}}</td>
                 <td><a href="{{ internship.description_file.url }}">Description File</a></td>
                 <td>{{internship.startup_website}}</td>
+                <td>{{internship.last_date_to_apply}}</td>
             </tr>
         {% endfor %}
     </tbody>

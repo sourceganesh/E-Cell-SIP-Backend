@@ -9,3 +9,5 @@ class StartUpInternships(models.Model):
     incentive = models.IntegerField()
     description_file = models.FileField(upload_to ='media/attachments/%Y/%m/')
     startup_website = models.URLField()
+    last_date_to_apply = models.DateField()
+    

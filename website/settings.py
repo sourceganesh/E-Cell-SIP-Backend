@@ -140,3 +140,5 @@ STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+MAX_STARTUP_FILE_UPLOAD = 20971520

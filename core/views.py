@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from core.forms import StartUpInternshipModelForm
+from core.models import StartUpInternships
 
 def startup_form(request):
 
@@ -14,4 +15,6 @@ def startup_form(request):
 
 def student_intership_view(request):
     
-    pass
+    all_startups = StartUpInternships.objects.all()
+
+    return render(request, 'core/startup_internship_view.html', {'all_startups' : all_startups})

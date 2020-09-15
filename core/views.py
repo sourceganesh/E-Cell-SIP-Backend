@@ -15,6 +15,6 @@ def startup_form(request):
 
 def student_intership_view(request):
     
-    all_startups = StartUpInternships.objects.all()
+    all_internships = StartUpInternships.objects.all()
 
-    return render(request, 'core/startup_internship_view.html', {'all_startups' : all_startups})
+    return render(request, 'core/startup_internship_view.html', {'all_internships' : all_internships})

@@ -1,0 +1,31 @@
+{% load static %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+
+<table class="table mt-4">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Point of Contact Name</th>
+        <th scope="col">Point of Contact E-Mail</th>
+        <th scope="col">Point of Contact Phone</th>
+        <th scope="col">Point of Contact Incentive</th>
+        <th scope="col">Point of Contact Attached Document</th>
+        <th scope="col">Website</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for internship in all_internships %}
+            <tr>
+                <td>{{internship.startup_name}}</td>
+                <td>{{internship.startup_contact_name}}</td>
+                <td>{{internship.startup_contact_email}}</td>
+                <td>{{internship.startup_contact_phone}}</td>
+                <td>{{internship.incentive}}</td>
+                <td><a href="{{ internship.description_file.url }}">Description File</a></td>
+                <td>{{internship.startup_website}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+  </table>
